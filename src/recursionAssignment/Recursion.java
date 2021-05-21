@@ -30,15 +30,22 @@ public class Recursion{
   }
 
   public static String pairStar(String str){
+// Ends method if there aren't two characters to compare
+    int length = str.length();
+
     if (str.length() == 1){
         return str;
     }
 
-    if(str.charAt(0) == str.charAt(1)){
-      return str.substring(0,1) + "*" + pairStar(str.substring(1));
+    char firstLetter = str.charAt(0);
+    char secondLetter = str.charAt(1);
+// If the characters match, print out firstLetter, a star, and run again
+    if(firstLetter == secondLetter){
+      return str.substring(0, 1) + "*" + pairStar(str.substring(1));
     }
+// If they do not match, print out firstLetter, run again
     else{
-      return str.substring(0,1) + pairStar(str.substring(1));
+      return str.substring(0, 1) + pairStar(str.substring(1));
     }
   }
   
