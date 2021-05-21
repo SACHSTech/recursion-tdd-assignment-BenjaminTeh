@@ -11,9 +11,14 @@ public class RecursionTest {
     public void beforeTest(){
       // some steps to perform before tests are run
     }
+
     @Test
     public void Test1(){
         assertEquals(2, Recursion.count7(717));
+    }
+    @Test
+    public void Test2(){
+        assertEquals(1, Recursion.count7(7));
     }
     
     @After
