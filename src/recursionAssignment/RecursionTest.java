@@ -40,6 +40,10 @@ public class RecursionTest {
     public void Test7(){
         assertEquals("a*a*a*a", Recursion.pairStar("aaaa"));
     }
+    @Test
+    public void Test8(){
+        assertEquals("", Recursion.pairStar(""));
+    }
 
     @After
     public void afterTest(){
