@@ -55,7 +55,7 @@ public class Recursion{
 // Statement to end method if there aren't two characters to clean
     int length = str.length();
 
-    if(length == 1){
+    if(length <= 1){
       return str;
     }
 
