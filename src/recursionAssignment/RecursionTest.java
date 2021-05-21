@@ -20,7 +20,11 @@ public class RecursionTest {
     public void Test2(){
         assertEquals(1, Recursion.count7(7));
     }
-    
+    @Test
+    public void Test3(){
+        assertEquals(0, Recursion.count7(123));
+    }
+
     @After
     public void afterTest(){
       // some steps to perform after tests are run
