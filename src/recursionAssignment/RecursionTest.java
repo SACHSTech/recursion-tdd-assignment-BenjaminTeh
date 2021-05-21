@@ -48,6 +48,10 @@ public class RecursionTest {
     public void Test9(){
         assertEquals("yza", Recursion.stringClean("yyzzza"));
     }
+    @Test
+    public void Test10(){
+        assertEquals("abcd", Recursion.stringClean("abbbcdd"));
+    }
 
     @After
     public void afterTest(){
