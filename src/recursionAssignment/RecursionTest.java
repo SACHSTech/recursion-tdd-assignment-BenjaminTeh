@@ -36,6 +36,10 @@ public class RecursionTest {
     public void Test6(){
         assertEquals("x*xy*y", Recursion.pairStar("xxyy"));
     }
+    @Test
+    public void Test7(){
+        assertEquals("a*a*a*a", Recursion.pairStar("aaaa"));
+    }
 
     @After
     public void afterTest(){
