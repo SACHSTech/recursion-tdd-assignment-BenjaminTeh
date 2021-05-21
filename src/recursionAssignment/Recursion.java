@@ -1,6 +1,8 @@
 package recursionAssignment;
 import java.io.*;
 
+// @author Benjamin Teh
+
 public class Recursion{
 
   public static int count7(int n){
@@ -50,15 +52,22 @@ public class Recursion{
   }
 
   public static String stringClean(String str){
-    if(str.length() == 1){
+// Statement to end method if there aren't two characters to clean
+    int length = str.length();
+
+    if(length == 1){
       return str;
     }
 
-    if (str.charAt(0) == str.charAt(1)){
+    int firstChar = str.charAt(0);
+    int compareChar = str.charAt(1);
+// If characters can be cleaned, exclude the first character and run again
+    if (firstChar == compareChar){
       return stringClean(str.substring(1));
     }
+// If characters cannot be cleaned, return the first character and run again
     else{
-      return str.substring(0,1) + stringClean(str.substring(1));
+      return str.substring(0, 1) + stringClean(str.substring(1));
     }
   }
   
