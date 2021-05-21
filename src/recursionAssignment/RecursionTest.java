@@ -44,6 +44,10 @@ public class RecursionTest {
     public void Test8(){
         assertEquals("", Recursion.pairStar(""));
     }
+    @Test
+    public void Test9(){
+        assertEquals("yza", Recursion.stringClean("yyzzza"));
+    }
 
     @After
     public void afterTest(){

@@ -40,12 +40,22 @@ public class Recursion{
     char firstLetter = str.charAt(0);
     char secondLetter = str.charAt(1);
 // If the characters match, print out firstLetter, a star, and run again
-    if(firstLetter == secondLetter){
+    if (firstLetter == secondLetter){
       return str.substring(0, 1) + "*" + pairStar(str.substring(1));
     }
 // If they do not match, print out firstLetter, run again
     else{
       return str.substring(0, 1) + pairStar(str.substring(1));
+    }
+  }
+
+  public static String stringClean(String str){
+    
+    if (str.charAt(0) == str.charAt(1)){
+      return stringClean(str.substring(1));
+    }
+    else{
+      return str.substring(0,1) + stringClean(str.substring(1));
     }
   }
   
