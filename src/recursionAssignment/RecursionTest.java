@@ -28,7 +28,10 @@ public class RecursionTest {
     public void Test4(){
         assertEquals(-1, Recursion.count7(-1));
     }
-
+    @Test
+    public void Test5(){
+        assertEquals("hel*lo", Recursion.pairStar("hello"));
+    }
     @After
     public void afterTest(){
       // some steps to perform after tests are run

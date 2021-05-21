@@ -28,5 +28,19 @@ public class Recursion{
     // Recursive case
     return count7(n) + sevenCounter;
   }
+
+  public static String pairStar(String str){
+    char lastLetter;
+    char firstLetter;
+    int length = str.length();
+    lastLetter = str.charAt(length - 1);
+    firstLetter = str.charAt(length - 2);
+      if(firstLetter == lastLetter){
+        return str.substring(0, (length - 2)) + "*" + lastLetter;
+      }
+      else{
+        return pairStar(str.substring(0, (length - 2)));
+      }
+  }
   
 }
