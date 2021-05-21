@@ -21,6 +21,7 @@ public class RecursionTest{
         // make assertion statement(s)
         // assertEquals(EXPECTEDVALUE, TESTVALUE);
         // assertTrue(TESTBOOLEAN);
+        assertEquals(1, Recursion.count7(7));
     }
     
     // add more tests
