@@ -30,17 +30,16 @@ public class Recursion{
   }
 
   public static String pairStar(String str){
-    char lastLetter;
-    char firstLetter;
-    int length = str.length();
-    lastLetter = str.charAt(length - 1);
-    firstLetter = str.charAt(length - 2);
-      if(firstLetter == lastLetter){
-        return str.substring(0, (length - 2)) + "*" + lastLetter;
-      }
-      else{
-        return pairStar(str.substring(0, (length - 2)));
-      }
+    if (str.length() == 1){
+        return str;
+    }
+
+    if(str.charAt(0) == str.charAt(1)){
+      return str.substring(0,1) + "*" + pairStar(str.substring(1));
+    }
+    else{
+      return str.substring(0,1) + pairStar(str.substring(1));
+    }
   }
   
 }
