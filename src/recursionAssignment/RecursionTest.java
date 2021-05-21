@@ -15,6 +15,7 @@ public class RecursionTest {
     public void Test1(){
         assertEquals(2, Recursion.count7(717));
     }
+    
     @After
     public void afterTest(){
       // some steps to perform after tests are run
