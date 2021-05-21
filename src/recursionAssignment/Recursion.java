@@ -33,7 +33,7 @@ public class Recursion{
 // Ends method if there aren't two characters to compare
     int length = str.length();
 
-    if (str.length() == 1){
+    if (str.length() < 2){
         return str;
     }
 
