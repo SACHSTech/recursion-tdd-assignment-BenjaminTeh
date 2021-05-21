@@ -2,12 +2,13 @@ package recursionAssignment;
 import java.io.*;
 
 public class Recursion{
+
   public static int count7(int n){
     int sevenCounter = 0;
     if (n < 0){
       return -1;
     }
-    if (n % 10 == 7){
+    else if (n % 10 == 7){
       sevenCounter++;
       if (n / 10 == 0 && n % 10 == 7){
         return sevenCounter;
@@ -20,6 +21,7 @@ public class Recursion{
       }
       n = n / 10;
     }
-    return n;
+    return count7(n) + sevenCounter;
   }
+  
 }
